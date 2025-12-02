@@ -9,6 +9,6 @@ if ($mysqli->connect_errno) {
 if (!isset($_SESSION)) {
   session_start();  
 }
-$login_return="Location: http://app_mds.test:8080/index.php";
-$login_index="Location: http://app_mds.test:8080/principal.php";
+$login_return="Location: http://app-mds.test:8080/index.php";
+$login_index="Location: http://app-mds.test:8080/principal.php";
 ?>
