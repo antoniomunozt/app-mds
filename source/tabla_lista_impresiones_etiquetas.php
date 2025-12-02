@@ -1,10 +1,10 @@
 <?php 
 
 $manipulador =0;
-$tipo="";
+$tipo=0;
 //$formato ="";
-$fecha_desde = "" ;
-$fecha_hasta ="";
+$fecha_desde = 0 ;
+$fecha_hasta =0;
 $estoy_filtrando=0;
 
 if (!empty($_GET))

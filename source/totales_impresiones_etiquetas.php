@@ -1,9 +1,9 @@
 <?php 
     $manipulador =0;
-    $tipo="";
-    $formato ="";
-    $fecha_desde = "" ;
-    $fecha_hasta ="";
+    $tipo=0;
+    $formato =0;
+    $fecha_desde = 0 ;
+    $fecha_hasta =0;
     $estoy_filtrando=0;
 
     if (!empty($_GET))
