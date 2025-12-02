@@ -1,13 +1,66 @@
-# Archivos del sistema
+# =========================
+# SISTEMA / EDITORES
+# =========================
+# Mac / Windows
 .DS_Store
 Thumbs.db
+ehthumbs.db
+Desktop.ini
 
-# Configuración local
+# VSCode
+.vscode/
+.history/
+
+# PhpStorm / JetBrains
+.idea/
+
+# Otros editores
+*.swp
+*.swo
+
+# =========================
+# CONFIGURACIÓN LOCAL
+# =========================
+# Ficheros con contraseñas o datos sensibles
 .env
+.env.*
+config.local.php
+config.php.bak
+*.local.php
+*.secret.php
 
-# Dependencias (si usas Composer / Node)
-vendor/
+# =========================
+# DEPENDENCIAS
+# =========================
+# Composer
+/vendor/
+/composer.lock
+
+# Node (si usas algo de front)
 node_modules/
+npm-debug.log*
+yarn-error.log*
 
-# Logs
+# =========================
+# LOGS / CACHÉS / TEMP
+# =========================
+logs/
 *.log
+*.tmp
+tmp/
+cache/
+session/
+upload_tmp/
+
+# =========================
+# OTROS
+# =========================
+# Copias de seguridad
+*.bak
+*.old
+*.orig
+
+# Ficheros generados
+*.zip
+*.tar
+*.tar.gz
