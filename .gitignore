@@ -1,0 +1,13 @@
+# Archivos del sistema
+.DS_Store
+Thumbs.db
+
+# Configuración local
+.env
+
+# Dependencias (si usas Composer / Node)
+vendor/
+node_modules/
+
+# Logs
+*.log
