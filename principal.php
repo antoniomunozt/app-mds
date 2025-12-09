@@ -46,40 +46,34 @@
   <body class="nav-md">
     <div class="container body">
         <div class="main_container">        
-            <?php include './source/menu.php';  ?>
+            <?php  include './source/menu.php';   ?>
             <?php include './source/top-navigation.php';  ?>       
             <!-- page content -->        
             <div class="right_col" role="main">
-                <!-- top tiles -->
+                <!-- FILA 1: KPIs -->
                 <div class="row top_tiles">
-                    
-                    <!-- Usuarios Totales -->
                     <?php include './source/contador_usuarios.php';  ?>  
-                
-                    <!-- Licencias Totales -->
                     <?php include './source/contador_licencias.php';  ?>
-
-                    <!-- Manipuladores Totales -->
                     <?php if ($es_admin==1) include './source/contador_manipuladores.php';  ?>
-
-                    <!-- Licencias CLOUD -->
                     <?php if ($es_admin==1) include './source/contador_licencias_cloud.php';  ?>
+                </div>
 
-                    <!-- DONUT MATRICULAS-->
-                    <?php if ($es_admin==1) include './source/donut.php';  ?>
+                <?php if ($es_admin==1): ?>
 
-                    <!-- DONUT ETIQUETAS-->
-                    <?php if ($es_admin==1) include './source/donut_etiquetas.php';  ?>
-                    
-                    <hr>
+                    <!-- FILA 2: DONUTS -->
+                    <div class="row">
+                        <?php include './source/donut.php';  ?>
+                        <?php include './source/donut_etiquetas.php';  ?>
+                    </div>
 
-                    <!-- BARRAS MATRICULAS -->
-                    <?php if ($es_admin==1) include './source/barras.php'; ?>
+                    <!-- FILA 3: BARRAS -->
+                    <div class="row">
+                        <?php include './source/barras.php'; ?>
+                        <?php include './source/barras_etiquetas.php'; ?>
+                    </div>
 
-                    <!-- BARRAS ETIQUETAS -->
-                    <?php if ($es_admin==1) include './source/barras_etiquetas.php'; ?>
-                    
-                </div>        
+                <?php endif; ?>
+        
             <!-- /top tiles -->         
             </div>          
         </div>
