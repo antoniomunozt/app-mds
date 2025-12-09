@@ -128,5 +128,27 @@
     });   
 
 </script>
+
+<script>
+  jQuery(function($) {
+      // Si ya está inicializado por algún JS global, lo destruimos
+      if ($.fn.DataTable.isDataTable('#datatable-buttons')) {
+          $('#datatable-buttons').DataTable().destroy();
+      }
+
+      // Inicializamos SOLO la tabla de esta página con nuestra config
+      $('#datatable-buttons').DataTable({
+          paging: false,        // sin paginación (la hacemos en servidor)
+          lengthChange: false,  // sin combo "mostrar X registros"
+          info: false,          // sin texto "Mostrando X de Y"
+          searching: true,      // buscador en la página actual
+          ordering: true,       // ordenación de columnas
+          order: [[5, 'desc']], //Para ordenar por Fecha Impresion
+          responsive: true,
+          dom: 'Bfrtip',
+          buttons: ['excel', 'pdf']
+      });
+  });
+</script>
  
 </html>

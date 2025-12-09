@@ -13,21 +13,15 @@
         <div class="x_content">
             <label class="control-label col-md-3 col-sm-3 col-xs-12" for="myDatepickerdesde">Fecha Desde</label>
             <div class='input-group date' id='myDatepickerdesde'>
-                <input type='text' class="form-control" name="fechadesde" id="fechadesde" value="<?php echo date("d/m/Y",strtotime(date("Y/m/d")."- 1 year")) ?>" />                
-                <span class="input-group-addon">
-                <span class="glyphicon glyphicon-calendar"></span>
-                </span>
+                <input type='text' class="form-control" name="fechadesde" id="fechadesde" value="<?php echo date("d/m/Y",strtotime(date("Y/m/d")."- 1 year")) ?>" />
+                <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
             </div>
-
             <label class="control-label col-md-3 col-sm-3 col-xs-12" for="myDatepickerhasta">Fecha Hasta</label>
             <div class='input-group date' id='myDatepickerhasta'>
                 <input type='text' class="form-control" name="fechahasta" id="fechahasta" value="<?php echo date('d/m/Y') ?>" />
-                <span class="input-group-addon">
-                <span class="glyphicon glyphicon-calendar"></span>
-                </span>
+                <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
             </div>                                
             <button id="button" onclick="recargar_donut();">Recargar</button>
-        </div>
-        
+        </div>        
     </div>   
 </div>

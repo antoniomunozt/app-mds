@@ -9,8 +9,6 @@
         </div>
         <div class="x_content">
             <canvas id="canvas_etiquetas"></canvas>
-        </div>     
-        
-
+        </div>
     </div>   
 </div>
