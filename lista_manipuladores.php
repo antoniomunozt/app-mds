@@ -157,8 +157,27 @@
   <script src="./vendors/pdfmake/build/pdfmake.min.js"></script>
   <script src="./vendors/pdfmake/build/vfs_fonts.js"></script>
  
+  <script>
+      // Usamos jQuery en modo seguro, así nos aseguramos de que $ existe
+      jQuery(function($) {
+          // Si ya está inicializado por algún JS global, lo destruimos
+          if ($.fn.DataTable.isDataTable('#datatable-buttons')) {
+              $('#datatable-buttons').DataTable().destroy();
+          }
+
+          // Inicializamos la tabla de ESTA página con nuestra config
+          $('#datatable-buttons').DataTable({
+              paging: false,        // 🔴 sin paginación
+              lengthChange: false,  // sin selector "mostrar X registros"
+              info: false,          // sin "Mostrando X de Y"
+              searching: true,      // buscador (si lo quieres)
+              ordering: true,       // ordenación de columnas
+              responsive: true,
+              dom: 'Bfrtip',
+              buttons: ['excel', 'pdf']
+          });
+      });
+  </script>
 </html>
-
-
 
 
